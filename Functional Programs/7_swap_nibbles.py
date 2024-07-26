@@ -24,12 +24,15 @@ class Swap:
             decimal number after swapping nibbles.
         '''
         
+        
+        
+        
         number = int(number)
         if number == 0:
             return '0'
         
         binary_number = ''
-        i = 7  
+        i = 8  
         while i >= 0:
             if 2**i <= number:
                 binary_number += '1'
@@ -41,6 +44,7 @@ class Swap:
         swap = binary_number[4:] + binary_number[:4]
 
         return int(swap,2)
+
 
 def main():
     '''
@@ -54,6 +58,7 @@ def main():
         print(f"Number after swapping nibble is: {Swap.swap_nibbles(number)}")
     else:
         print("Enter a valid non-negative integer.")
+
 
 # If the program is run directly from this location, then only run the main function
 if __name__ == '__main__':
